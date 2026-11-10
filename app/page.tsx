@@ -1,69 +1,105 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 
-export default function Home() {
+const apps = [
+  {
+    slug: 'ussdguard',
+    name: 'UssdGuard',
+    tagline: 'Android automation engine — like Tasker, built for USSD & device security',
+    description:
+      'A powerful macro/automation engine for Android. Create triggers, set conditions, and chain multi-step actions — all without root. Supports device sensors, hardware control, file outputs, and secure cloud sync.',
+    platform: 'Android',
+    status: 'beta' as const,
+    gradient: 'from-blue-500/20 to-teal-500/20',
+    icon: '🤖',
+    tags: ['Automation', 'Security', 'USSD'],
+  },
+];
+
+const statusConfig = {
+  beta:       { label: 'Beta',        variant: 'secondary' as const },
+  stable:     { label: 'Stable',      variant: 'default'   as const },
+  comingsoon: { label: 'Coming soon', variant: 'outline'   as const },
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
+      {/* Hero */}
+      <div className="mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          Apps by Qwabi
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-xl">
+          Mobile and web tools built to solve real problems — primarily for Android,
+          made in South Africa.
+        </p>
+      </div>
+
+      <Separator className="mb-12" />
+
+      {/* Grid */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {apps.map(app => {
+          const { label, variant } = statusConfig[app.status] ?? statusConfig.beta;
+          return (
+            <Link key={app.slug} href={`/apps/${app.slug}`} className="group outline-none">
+              <Card className="h-full transition-all duration-200 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group-focus-visible:ring-2 group-focus-visible:ring-ring">
+                {/* Icon area */}
+                <div className={`rounded-t-lg bg-gradient-to-br ${app.gradient} p-8 flex items-center justify-center`}>
+                  <span className="text-6xl">{app.icon}</span>
+                </div>
+
+                <CardHeader className="pb-2 pt-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h2 className="text-lg font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                      {app.name}
+                    </h2>
+                    <div className="flex flex-wrap gap-1 justify-end">
+                      <Badge variant="outline" className="text-xs whitespace-nowrap">
+                        {app.platform}
+                      </Badge>
+                      <Badge variant={variant} className="text-xs whitespace-nowrap">
+                        {label}
+                      </Badge>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-snug mt-1">
+                    {app.tagline}
+                  </p>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                    {app.description}
+                  </p>
+                </CardContent>
+
+                <CardFooter className="pt-2 flex flex-wrap gap-2">
+                  {app.tags.map(tag => (
+                    <Badge key={tag} variant="secondary" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </CardFooter>
+              </Card>
+            </Link>
+          );
+        })}
+
+        {/* Placeholder card */}
+        <Card className="h-full border-dashed opacity-40">
+          <div className="rounded-t-lg bg-muted/30 p-8 flex items-center justify-center">
+            <span className="text-6xl">🔧</span>
+          </div>
+          <CardHeader>
+            <h2 className="text-lg font-semibold text-muted-foreground">More coming soon</h2>
+            <p className="text-sm text-muted-foreground">New apps in development.</p>
+          </CardHeader>
+        </Card>
+      </div>
     </div>
   );
 }
