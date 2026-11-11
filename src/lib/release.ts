@@ -12,12 +12,12 @@ export const ussdguardRelease = {
 
 // Written by screen-lock/scripts/release-apk.sh. Rollback = revert this file.
 export const screenLockRelease = {
-  version: '0.1.0',
-  versionCode: 1,
+  version: '0.1.1',
+  versionCode: 2,
   releasedOn: '2026-11-11',
-  fileName: 'screen-lock-0.1.0.apk',
-  sizeMb: 0,
-  sha256: 'not-yet-built',
-  url: '',
+  fileName: 'screen-lock-0.1.1.apk',
+  sizeMb: 31.6,
+  sha256: '1f66996aff3408679df569eb4210b0b87db2b5ee822b93aee976540391faa684',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.1.1.apk',
   minAndroid: '8.0',
 };
