@@ -21,3 +21,16 @@ export const screenLockRelease = {
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.0.apk',
   minAndroid: '8.0',
 };
+
+// Mirrors device-owner/qwabi-dashboard/src/lib/release.ts (Qwabi Track ships from there).
+// Update both when Qwabi Track is released.
+export const qwabiTrackRelease = {
+  version: '0.1.12',
+  versionCode: 13,
+  releasedOn: '2026-11-07',
+  fileName: 'qwabi-track-0.1.12.apk',
+  sizeMb: 35.5,
+  sha256: '8df98f34dfa64a54223e6920238e26605f4a685abc78650c625b9e30ce712127',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qwabi-track-0.1.12.apk',
+  minAndroid: '11',
+};
