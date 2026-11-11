@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Hammer } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -13,8 +14,8 @@ const apps = [
       'A powerful macro/automation engine for Android. Create triggers, set conditions, and chain multi-step actions — all without root. Supports device sensors, hardware control, file outputs, and secure cloud sync.',
     platform: 'Android',
     status: 'beta' as const,
-    gradient: 'from-blue-500/20 to-teal-500/20',
-    icon: '🤖',
+    gradient: 'from-blue-600/25 to-slate-900/40',
+    icon: '/apps/ussdguard/icon.svg',
     tags: ['Automation', 'Security', 'USSD'],
   },
 ];
@@ -50,7 +51,14 @@ export default function HomePage() {
               <Card className="h-full transition-all duration-200 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group-focus-visible:ring-2 group-focus-visible:ring-ring">
                 {/* Icon area */}
                 <div className={`rounded-t-lg bg-gradient-to-br ${app.gradient} p-8 flex items-center justify-center`}>
-                  <span className="text-6xl">{app.icon}</span>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
+                  <img
+                    src={app.icon}
+                    alt={`${app.name} icon`}
+                    width={88}
+                    height={88}
+                    className="rounded-2xl shadow-lg shadow-black/30"
+                  />
                 </div>
 
                 <CardHeader className="pb-2 pt-5">
@@ -96,7 +104,7 @@ export default function HomePage() {
         {/* Placeholder card */}
         <Card className="h-full border-dashed opacity-40">
           <div className="rounded-t-lg bg-muted/30 p-8 flex items-center justify-center">
-            <span className="text-6xl">🔧</span>
+            <Hammer className="h-14 w-14 text-muted-foreground" strokeWidth={1.5} aria-hidden />
           </div>
           <CardHeader>
             <h2 className="text-lg font-semibold text-muted-foreground">More coming soon</h2>

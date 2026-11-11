@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { ClipboardList, FolderSync, ListChecks, LockKeyhole, Shuffle, Zap } from 'lucide-react';
 import { ussdguardRelease as rel } from '@/src/lib/release';
 
 export const metadata: Metadata = {
@@ -12,12 +13,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: '⚡', title: 'Trigger-based macros', body: 'Battery level, screen on/off, network change, time schedules, and manual triggers.' },
-  { icon: '🔀', title: 'Condition engine', body: 'AND/OR/NOT condition trees. Macros only run when every condition passes.' },
-  { icon: '🔧', title: 'Multi-step actions', body: 'HTTP requests, file saves, flashlight, vibration, notifications, app launch, and more.' },
-  { icon: '☁', title: 'Cloud-free sync', body: 'Pick any folder — Google Drive, SD card, Dropbox — using the system folder picker. No Cloud Console needed.' },
-  { icon: '🔒', title: 'Secure credential vault', body: 'OAuth tokens and API keys encrypted with Android Keystore AES-256-GCM. Keys never leave the hardware secure element.' },
-  { icon: '📋', title: 'Execution history', body: 'Per-macro JSONL logs. See exactly what ran, when, and what it produced.' },
+  { icon: Zap, title: 'Trigger-based macros', body: 'Battery level, screen on/off, network change, time schedules, and manual triggers.' },
+  { icon: Shuffle, title: 'Condition engine', body: 'AND/OR/NOT condition trees. Macros only run when every condition passes.' },
+  { icon: ListChecks, title: 'Multi-step actions', body: 'HTTP requests, file saves, flashlight, vibration, notifications, app launch, and more.' },
+  { icon: FolderSync, title: 'Cloud-free sync', body: 'Pick any folder — Google Drive, SD card, Dropbox — using the system folder picker. No Cloud Console needed.' },
+  { icon: LockKeyhole, title: 'Secure credential vault', body: 'OAuth tokens and API keys encrypted with Android Keystore AES-256-GCM. Keys never leave the hardware secure element.' },
+  { icon: ClipboardList, title: 'Execution history', body: 'Per-macro JSONL logs. See exactly what ran, when, and what it produced.' },
 ];
 
 const techStack = [
@@ -38,9 +39,14 @@ export default function UssdGuardPage() {
 
       {/* Hero */}
       <div className="flex flex-col sm:flex-row gap-8 items-start">
-        <div className="flex-shrink-0 w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-teal-500/30 flex items-center justify-center text-5xl border border-border">
-          🤖
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
+        <img
+          src="/apps/ussdguard/icon.svg"
+          alt="UssdGuard icon"
+          width={96}
+          height={96}
+          className="flex-shrink-0 rounded-2xl shadow-lg shadow-black/30"
+        />
         <div className="space-y-3 flex-1">
           <div className="flex flex-wrap gap-2 items-center">
             <h1 className="text-3xl font-bold text-foreground">UssdGuard</h1>
@@ -76,7 +82,9 @@ export default function UssdGuardPage() {
             <Card key={f.title} className="border-border">
               <CardHeader className="pb-2">
                 <CardTitle className="flex items-center gap-3 text-base font-semibold">
-                  <span className="text-2xl">{f.icon}</span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                    <f.icon className="h-5 w-5" aria-hidden />
+                  </span>
                   {f.title}
                 </CardTitle>
               </CardHeader>
