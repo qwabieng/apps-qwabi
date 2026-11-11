@@ -10,15 +10,15 @@ export const ussdguardRelease = {
   minAndroid: '7.0',
 };
 
-// Written by screen-lock release workflow. Rollback = revert this file.
+// Written by screen-lock/scripts/release-apk.sh. Rollback = revert this file.
 export const screenLockRelease = {
-  version: '0.2.0',
-  versionCode: 3,
+  version: '0.2.1',
+  versionCode: 4,
   releasedOn: '2026-11-11',
-  fileName: 'screen-lock-0.2.0.apk',
-  sizeMb: 31.7,
-  sha256: '05ac21169fa04b39f515cb7c9dae6964aa4c62ae415a80d436302da0d1d117a2',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.0.apk',
+  fileName: 'screen-lock-0.2.1.apk',
+  sizeMb: 32.0,
+  sha256: 'b0086184a53a12831a02bb7a74bd5bd5f1ece7439736559923c7330336f330a5',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.1.apk',
   minAndroid: '8.0',
 };
 
