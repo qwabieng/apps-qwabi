@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
+import { ussdguardRelease as rel } from '@/src/lib/release';
 
 export const metadata: Metadata = {
   title: 'UssdGuard',
@@ -51,18 +51,17 @@ export default function UssdGuardPage() {
             Android automation engine — like Tasker, built for USSD & device security.
             Create macros with triggers, conditions, and multi-step actions. No root required.
           </p>
-          <div className="flex flex-wrap gap-3 pt-1">
-            <Button disabled className="opacity-50 cursor-not-allowed">
-              Download APK — Coming soon
-            </Button>
+          <div className="flex flex-wrap items-center gap-3 pt-1">
             <a
-              href="https://github.com/AyabongaQwabi/UssdGuard"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+              href={rel.url}
+              download={rel.fileName}
+              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
             >
-              View on GitHub ↗
+              Download APK · v{rel.version}
             </a>
+            <span className="text-sm text-muted-foreground">
+              {rel.sizeMb} MB · Android {rel.minAndroid}+ · {rel.releasedOn}
+            </span>
           </div>
         </div>
       </div>
@@ -103,18 +102,29 @@ export default function UssdGuardPage() {
 
       <Separator />
 
-      {/* Status */}
+      {/* Release */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">Status</h2>
-        <Card className="border-primary/30 bg-primary/5">
-          <CardContent className="pt-6 space-y-2">
-            <p className="text-sm text-foreground font-medium">🚧 Currently in beta development</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Core automation engine (Phases 1–4) is complete. The app is not yet publicly available
-              for download. Watch this space or check the GitHub repository for progress.
-            </p>
+        <h2 className="text-xl font-semibold text-foreground">Latest release</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
+              <dt className="text-muted-foreground">Version</dt>
+              <dd className="font-mono">{rel.version} (build {rel.versionCode})</dd>
+              <dt className="text-muted-foreground">Released</dt>
+              <dd>{rel.releasedOn}</dd>
+              <dt className="text-muted-foreground">Size</dt>
+              <dd>{rel.sizeMb} MB</dd>
+              <dt className="text-muted-foreground">Requires</dt>
+              <dd>Android {rel.minAndroid} or newer, 64-bit (arm64)</dd>
+              <dt className="text-muted-foreground">SHA-256</dt>
+              <dd className="font-mono text-xs break-all">{rel.sha256}</dd>
+            </dl>
           </CardContent>
         </Card>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Beta. Installed outside the Play Store, so Android will ask you to allow installs from
+          your browser and Play Protect may show a warning the first time.
+        </p>
       </section>
 
       {/* Back link */}
