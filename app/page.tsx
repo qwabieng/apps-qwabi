@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { release } from '@/src/lib/release';
 
 const apps = [
   {
@@ -36,6 +37,25 @@ export default function HomePage() {
           Mobile and web tools built to solve real problems — primarily for Android,
           made in South Africa.
         </p>
+
+        {/* Release info strip */}
+        <div className="flex flex-wrap items-center gap-3 pt-2">
+          <span className="text-sm text-muted-foreground">
+            Site release:
+          </span>
+          <Badge variant="outline" className="font-mono text-xs">
+            v{release.version}
+          </Badge>
+          <span className="text-xs text-muted-foreground">{release.releasedOn}</span>
+          <a
+            href={release.indexUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-primary hover:underline"
+          >
+            View on CDN ↗
+          </a>
+        </div>
       </div>
 
       <Separator className="mb-12" />
