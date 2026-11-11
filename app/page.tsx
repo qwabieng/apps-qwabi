@@ -3,7 +3,7 @@ import { Hammer } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease } from '@/src/lib/release';
 
 const apps = [
   {
@@ -17,6 +17,20 @@ const apps = [
     gradient: 'from-blue-600/25 to-slate-900/40',
     icon: '/apps/ussdguard/icon.svg',
     tags: ['Automation', 'Security', 'USSD'],
+    version: ussdguardRelease.version,
+  },
+  {
+    slug: 'screen-lock',
+    name: 'Qwabi Lock',
+    tagline: 'Advanced screen lock with face identification and macro automations',
+    description:
+      'Multi-mode screen protection with flexible unlock combinations (PIN, pattern, regex), face-based intruder detection, unlock insights, and user-configurable macro automations. No root required.',
+    platform: 'Android',
+    status: 'beta' as const,
+    gradient: 'from-blue-800/30 to-slate-900/50',
+    icon: '/apps/screen-lock/icon.svg',
+    tags: ['Security', 'Face ID', 'Automations'],
+    version: screenLockRelease.version,
   },
 ];
 
@@ -88,7 +102,7 @@ export default function HomePage() {
 
                 <CardFooter className="pt-2 flex flex-wrap gap-2">
                   <Badge variant="outline" className="font-mono text-xs">
-                    v{ussdguardRelease.version}
+                    v{app.version}
                   </Badge>
                   {app.tags.map(tag => (
                     <Badge key={tag} variant="secondary" className="text-xs">
