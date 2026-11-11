@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -65,6 +65,7 @@ const released: AppEntry[] = [
     tags: ['Security', 'Recovery', 'Device Owner'],
     href: 'https://dpc.qwabi.co.za/download',
     external: true,
+    version: qwabiTrackRelease.version,
   },
 ];
 
