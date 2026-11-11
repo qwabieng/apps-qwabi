@@ -1,11 +1,11 @@
 // Written by UssdGuard/scripts/release-apk.sh. Rollback = revert this file.
 export const ussdguardRelease = {
-  version: '0.1.2',
-  versionCode: 3,
+  version: '0.1.3',
+  versionCode: 4,
   releasedOn: '2026-11-11',
-  fileName: 'ussdguard-0.1.2.apk',
+  fileName: 'ussdguard-0.1.3.apk',
   sizeMb: 23.1,
-  sha256: '93b609c8e0e56b901213029f76da00d39d5c5d8b9d97f8eb571ecb711f783f1e',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.2.apk',
+  sha256: 'ca7aaafbe8199c8e08886a089bcc22e32ea31a47e7b7835edda90f4983793b87',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.3.apk',
   minAndroid: '7.0',
 };
