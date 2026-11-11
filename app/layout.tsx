@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
           <div className="mx-auto max-w-6xl px-4">
-            © {new Date().getFullYear()} Qwabi. Built in South Africa.
+            © 2026 Qwabi. Built in South Africa.
           </div>
         </footer>
       </body>
