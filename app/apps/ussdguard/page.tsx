@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 const features = [
   { icon: Phone, title: 'Calls and call history', body: 'Use qPhone as your default phone app for incoming and outgoing calls, with local call history and insights.' },
+  { icon: Bell, title: 'Call automations', body: 'Create call-only rules for time windows, caller groups and number patterns, including decline or silence and automatic SMS replies. qAutomate can manage these call rules through qPhone.' },
   { icon: Ban, title: 'Caller rules', body: 'Block exact numbers and number formats such as prefixes. Call rules stay on this device.' },
   { icon: Hash, title: 'Protected USSD codes', body: 'Require your qPhone PIN before sensitive USSD codes are dialed.' },
   { icon: Users, title: 'Caller groups', body: 'Group contacts from call history on this device.' },
@@ -53,7 +54,7 @@ export default function qPhonePage() {
             <Badge variant="secondary">Beta</Badge>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Calls, caller rules, protected USSD codes and local SIM alerts. qPhone uses Android&apos;s
+            Calls, call automations, protected USSD codes and local SIM alerts. qPhone uses Android&apos;s
             default phone-app role to present its call screen; it does not need a floating overlay.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
