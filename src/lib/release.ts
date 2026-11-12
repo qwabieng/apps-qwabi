@@ -45,3 +45,15 @@ export const qThemeAndroidRelease = {
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qtheme-1.0.0.apk',
   minAndroid: '8.0',
 };
+
+export const qDimAndroidRelease = {
+  version: '1.0.0',
+  versionCode: 1,
+  releasedOn: '2026-11-12',
+  fileName: 'qdim-1.0.0.apk',
+  sizeMb: 0.6,
+  sha256: 'c28d4b981b3616485106e633f5e7b824077b5662112534274252000c8c2fea01',
+  signingCertificateSha256: 'b099bb1b7bd5816ffeb2e45e1510aec698bfd87b7e133456e619cbf815e00608',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qdim-1.0.0.apk',
+  minAndroid: '8.0',
+};

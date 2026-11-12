@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease, qwabiTrackRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -66,6 +66,20 @@ const released: AppEntry[] = [
     href: 'https://dpc.qwabi.co.za/download',
     external: true,
     version: qwabiTrackRelease.version,
+  },
+  {
+    slug: 'q-dim',
+    name: 'qDim',
+    tagline: 'Make your screen gentler',
+    description:
+      'Adjustable dark overlay dims the screen over any app. Quick controls, touch-through dimming, and an always-available notification to turn it off.',
+    platform: 'Android',
+    status: 'beta',
+    gradient: 'from-slate-700/30 to-slate-950/60',
+    icon: '/apps/q-dim/icon.svg',
+    tags: ['Display', 'Screen dimmer'],
+    href: '/apps/q-dim',
+    version: qDimAndroidRelease.version,
   },
 ];
 
@@ -142,18 +156,6 @@ const comingSoon: AppEntry[] = [
     icon: '/apps/q-theme/icon.svg',
     tags: ['Design', 'Personalization'],
     href: '/apps/q-theme',
-  },
-  {
-    slug: 'q-dim',
-    name: 'qDim',
-    tagline: 'Dim your screen below the normal minimum brightness',
-    description:
-      'A focused screen dimmer for comfortable night-time use. The Android app is being prepared; a download will appear here when a signed release is available.',
-    platform: 'Android',
-    status: 'comingsoon',
-    gradient: 'from-slate-700/30 to-slate-950/60',
-    icon: '/apps/q-dim/icon.svg',
-    tags: ['Display', 'Night use'],
   },
   {
     slug: 'q-find',
