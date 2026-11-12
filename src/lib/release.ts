@@ -11,14 +11,16 @@ export const ussdguardRelease = {
 };
 
 // qLock release metadata. Keep this entry when updating any other app release.
+// Written by screen-lock/scripts/release-apk.sh. Rollback = revert this file.
+// Written by screen-lock/scripts/release-apk.sh. Rollback = revert this file.
 export const screenLockRelease = {
-  version: '0.2.5',
-  versionCode: 8,
+  version: '0.2.7',
+  versionCode: 10,
   releasedOn: '2026-11-12',
-  fileName: 'screen-lock-0.2.5.apk',
+  fileName: 'screen-lock-0.2.7.apk',
   sizeMb: 32.0,
-  sha256: 'df2b561de0eae568b1e2bd2752fd0157a9437122cda70767db44023bc81aa09d',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.5.apk',
+  sha256: '579a819c5a78302c6e9eb4ab737339129b4066a857434a911d60f7222b0e7a8d',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.7.apk',
   minAndroid: '8.0',
 };
 
