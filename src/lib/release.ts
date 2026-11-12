@@ -17,7 +17,7 @@ export const screenLockRelease = {
   releasedOn: '2026-11-12',
   fileName: 'screen-lock-0.2.4.apk',
   sizeMb: 21.3,
-  sha256: '5cd3660be58e9d30b825eb2b137bbd43dad5f65357f823c92fa0f4d6bdb396be',
+  sha256: '8aed8d01b2a105871788a3feaaab5c2ac988956e98c9cfc5d2dbd970917727b4',
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/screen-lock-0.2.4.apk',
   minAndroid: '8.0',
 };
