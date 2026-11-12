@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -81,6 +81,20 @@ const released: AppEntry[] = [
     href: '/apps/q-dim',
     version: qDimAndroidRelease.version,
   },
+  {
+    slug: 'q-theme',
+    name: 'qTheme',
+    tagline: 'Share one theme across your Qwabi Android apps',
+    description:
+      'Set a palette and contrast preference once in qTheme. qLock, qPhone and qFy read the shared on-device preference when they open.',
+    platform: 'Android + Web',
+    status: 'pilot',
+    gradient: 'from-violet-700/20 to-slate-900/50',
+    icon: '/apps/q-theme/icon.svg',
+    tags: ['Design', 'Personalization'],
+    href: '/apps/q-theme',
+    version: qThemeAndroidRelease.version,
+  },
 ];
 
 const comingSoon: AppEntry[] = [
@@ -143,19 +157,6 @@ const comingSoon: AppEntry[] = [
     gradient: 'from-slate-700/30 to-slate-900/50',
     icon: '/apps/q-activity/icon.svg',
     tags: ['Logging', 'Insights'],
-  },
-  {
-    slug: 'q-theme',
-    name: 'qTheme',
-    tagline: 'Share one theme across your Qwabi Android apps',
-    description:
-      'Set a palette and contrast preference once in qTheme. qLock, qPhone and qFy read the shared on-device preference when they open.',
-    platform: 'Android + Web',
-    status: 'pilot',
-    gradient: 'from-violet-700/20 to-slate-900/50',
-    icon: '/apps/q-theme/icon.svg',
-    tags: ['Design', 'Personalization'],
-    href: '/apps/q-theme',
   },
   {
     slug: 'q-find',
