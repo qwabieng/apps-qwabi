@@ -1,0 +1,88 @@
+:root {
+  --qwabi-glow: rgba(167, 139, 250, 0.16);
+}
+
+:root[data-qwabi-palette='coast'] {
+  color-scheme: dark;
+  --qwabi-background: #081b24;
+  --qwabi-surface: #0f2934;
+  --qwabi-surface-alt: #143643;
+  --qwabi-surface-high: #1c4552;
+  --qwabi-border: #285463;
+  --qwabi-text: #ecfeff;
+  --qwabi-text-muted: #9abec7;
+  --qwabi-q-theme: #38bdf8;
+  --background: var(--qwabi-background);
+  --foreground: var(--qwabi-text);
+  --card: var(--qwabi-surface);
+  --card-foreground: var(--qwabi-text);
+  --popover: var(--qwabi-surface);
+  --popover-foreground: var(--qwabi-text);
+  --primary: var(--qwabi-q-theme);
+  --primary-foreground: #071923;
+  --secondary: var(--qwabi-surface-alt);
+  --secondary-foreground: var(--qwabi-text);
+  --muted: var(--qwabi-surface-alt);
+  --muted-foreground: var(--qwabi-text-muted);
+  --accent: var(--qwabi-surface-high);
+  --accent-foreground: var(--qwabi-text);
+  --border: var(--qwabi-border);
+  --input: var(--qwabi-border);
+  --ring: var(--qwabi-q-theme);
+  --sidebar: var(--qwabi-surface);
+  --sidebar-foreground: var(--qwabi-text);
+  --sidebar-primary: var(--qwabi-q-theme);
+  --sidebar-primary-foreground: #071923;
+  --sidebar-accent: var(--qwabi-surface-alt);
+  --sidebar-accent-foreground: var(--qwabi-text);
+  --sidebar-border: var(--qwabi-border);
+  --sidebar-ring: var(--qwabi-q-theme);
+  --qwabi-glow: rgba(56, 189, 248, 0.16);
+}
+
+:root[data-qwabi-palette='ember'] {
+  color-scheme: dark;
+  --qwabi-background: #1a120e;
+  --qwabi-surface: #261a14;
+  --qwabi-surface-alt: #342219;
+  --qwabi-surface-high: #422b1d;
+  --qwabi-border: #593b29;
+  --qwabi-text: #fff7ed;
+  --qwabi-text-muted: #c1a58f;
+  --qwabi-q-theme: #fb923c;
+  --background: var(--qwabi-background);
+  --foreground: var(--qwabi-text);
+  --card: var(--qwabi-surface);
+  --card-foreground: var(--qwabi-text);
+  --popover: var(--qwabi-surface);
+  --popover-foreground: var(--qwabi-text);
+  --primary: var(--qwabi-q-theme);
+  --primary-foreground: #1a120e;
+  --secondary: var(--qwabi-surface-alt);
+  --secondary-foreground: var(--qwabi-text);
+  --muted: var(--qwabi-surface-alt);
+  --muted-foreground: var(--qwabi-text-muted);
+  --accent: var(--qwabi-surface-high);
+  --accent-foreground: var(--qwabi-text);
+  --border: var(--qwabi-border);
+  --input: var(--qwabi-border);
+  --ring: var(--qwabi-q-theme);
+  --sidebar: var(--qwabi-surface);
+  --sidebar-foreground: var(--qwabi-text);
+  --sidebar-primary: var(--qwabi-q-theme);
+  --sidebar-primary-foreground: #1a120e;
+  --sidebar-accent: var(--qwabi-surface-alt);
+  --sidebar-accent-foreground: var(--qwabi-text);
+  --sidebar-border: var(--qwabi-border);
+  --sidebar-ring: var(--qwabi-q-theme);
+  --qwabi-glow: rgba(251, 146, 60, 0.16);
+}
+
+:root[data-qwabi-contrast='high'] {
+  --qwabi-text-muted: #e2e8f0;
+  --qwabi-border: #8190a6;
+  --muted-foreground: var(--qwabi-text-muted);
+  --border: var(--qwabi-border);
+  --input: var(--qwabi-border);
+  --sidebar-border: var(--qwabi-border);
+}

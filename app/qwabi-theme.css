@@ -1,0 +1,25 @@
+/* Synced with packages/qwabi-theme/tokens.css for the standalone Hub deployment. */
+:root {
+  --qwabi-background: #0b1220;
+  --qwabi-surface: #111a2c;
+  --qwabi-surface-alt: #18233a;
+  --qwabi-surface-high: #1e2d45;
+  --qwabi-border: #24324d;
+  --qwabi-text: #f1f5f9;
+  --qwabi-text-muted: #94a3b8;
+  --qwabi-success: #22c55e;
+  --qwabi-danger: #ef4444;
+  --qwabi-warning: #f59e0b;
+  --qwabi-q-lock: #3b82f6;
+  --qwabi-q-phone: #38bdf8;
+  --qwabi-q-fy: #14b8a6;
+  --qwabi-q-find: #34d399;
+  --qwabi-q-automate: #f59e0b;
+  --qwabi-q-theme: #a78bfa;
+  --qwabi-space-1: 4px;
+  --qwabi-space-2: 8px;
+  --qwabi-space-3: 12px;
+  --qwabi-space-4: 16px;
+  --qwabi-space-6: 24px;
+  --qwabi-space-8: 32px;
+}

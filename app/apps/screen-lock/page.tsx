@@ -9,7 +9,7 @@ import {
 import { screenLockRelease as rel } from '@/src/lib/release';
 
 export const metadata: Metadata = {
-  title: 'Qwabi Lock',
+  title: 'qLock',
   description:
     'Advanced Android screen lock with face identification, flexible unlock combinations, mode-based security, and user-configurable macro automations.',
 };
@@ -33,7 +33,7 @@ const features = [
   {
     icon: Zap,
     title: 'Macro automations',
-    body: 'User-configurable multi-step macros triggered by lock events — on unlock, failed attempt, mode change, schedule. Shared with the central Qwabi Automations app.',
+    body: 'User-configurable multi-step macros triggered by lock events — on unlock, failed attempt, mode change, or schedule. General automations belong in qAutomate.',
   },
   {
     icon: BarChart3,
@@ -73,7 +73,7 @@ export default function ScreenLockPage() {
       <nav className="text-sm text-muted-foreground flex items-center gap-2">
         <Link href="/" className="hover:text-foreground transition-colors">Apps</Link>
         <span>/</span>
-        <span className="text-foreground">Qwabi Lock</span>
+        <span className="text-foreground">qLock</span>
       </nav>
 
       {/* Hero */}
@@ -81,14 +81,14 @@ export default function ScreenLockPage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/apps/screen-lock/icon.svg"
-          alt="Qwabi Lock icon"
+          alt="qLock icon"
           width={96}
           height={96}
           className="flex-shrink-0 rounded-2xl shadow-lg shadow-black/30"
         />
         <div className="space-y-3 flex-1">
           <div className="flex flex-wrap gap-2 items-center">
-            <h1 className="text-3xl font-bold text-foreground">Qwabi Lock</h1>
+            <h1 className="text-3xl font-bold text-foreground">qLock</h1>
             <Badge variant="outline">Android</Badge>
             <Badge variant="secondary">Beta</Badge>
           </div>

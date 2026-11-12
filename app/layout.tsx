@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { ThemeRuntime } from '@/components/theme-runtime';
 import './globals.css';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+        <ThemeRuntime />
         <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 flex h-14 items-center justify-between">
             <a href="/" className="font-semibold text-foreground hover:text-primary transition-colors">
@@ -25,6 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="/" className="hover:text-foreground transition-colors">Apps</a>
+              <a href="/about" className="hover:text-foreground transition-colors">About</a>
+              <a href="/apps/q-theme" className="hover:text-foreground transition-colors">Theme</a>
               <a href="https://qwabi.co.za" className="hover:text-foreground transition-colors">
                 qwabi.co.za ↗
               </a>
@@ -36,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
           <div className="mx-auto max-w-6xl px-4">
-            © 2026 Qwabi. Built in South Africa.
+            © 2026 Qwabi Apps. Engineered by Qwabi Engineering in South Africa.
           </div>
         </footer>
       </body>

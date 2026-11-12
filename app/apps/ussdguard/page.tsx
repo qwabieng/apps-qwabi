@@ -3,59 +3,58 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ClipboardList, FolderSync, ListChecks, LockKeyhole, Shuffle, Zap } from 'lucide-react';
+import { Ban, Bell, Hash, Phone, ShieldCheck, Users } from 'lucide-react';
 import { ussdguardRelease as rel } from '@/src/lib/release';
 
 export const metadata: Metadata = {
-  title: 'UssdGuard',
+  title: 'qPhone',
   description:
-    'Android automation engine — like Tasker, built for USSD & device security. Create macros with triggers, conditions, and multi-step actions.',
+    'The Qwabi phone app for calls, caller rules, call history, protected USSD codes, and on-device SIM alerts.',
 };
 
 const features = [
-  { icon: Zap, title: 'Trigger-based macros', body: 'Battery level, screen on/off, network change, time schedules, and manual triggers.' },
-  { icon: Shuffle, title: 'Condition engine', body: 'AND/OR/NOT condition trees. Macros only run when every condition passes.' },
-  { icon: ListChecks, title: 'Multi-step actions', body: 'HTTP requests, file saves, flashlight, vibration, notifications, app launch, and more.' },
-  { icon: FolderSync, title: 'Cloud-free sync', body: 'Pick any folder — Google Drive, SD card, Dropbox — using the system folder picker. No Cloud Console needed.' },
-  { icon: LockKeyhole, title: 'Secure credential vault', body: 'OAuth tokens and API keys encrypted with Android Keystore AES-256-GCM. Keys never leave the hardware secure element.' },
-  { icon: ClipboardList, title: 'Execution history', body: 'Per-macro JSONL logs. See exactly what ran, when, and what it produced.' },
+  { icon: Phone, title: 'Calls and call history', body: 'Use qPhone as your default phone app for incoming and outgoing calls, with local call history and insights.' },
+  { icon: Ban, title: 'Caller rules', body: 'Block exact numbers and number formats such as prefixes. Call rules stay on this device.' },
+  { icon: Hash, title: 'Protected USSD codes', body: 'Require your qPhone PIN before sensitive USSD codes are dialed.' },
+  { icon: Users, title: 'Caller groups', body: 'Group contacts from call history on this device.' },
+  { icon: ShieldCheck, title: 'SIM alerts', body: 'Receive a local alert when qPhone detects a SIM or network change.' },
+  { icon: Bell, title: 'Transparent protection', body: 'Review permissions and monitoring in setup. qPhone cannot grant itself access.' },
 ];
 
 const techStack = [
   'React Native 0.88', 'Kotlin', 'TypeScript',
-  'WorkManager', 'AlarmManager', 'Android Keystore',
-  'Storage Access Framework', 'Foreground Service',
+  'Android Telecom', 'React Native 0.88', 'Kotlin', 'On-device call history',
 ];
 
-export default function UssdGuardPage() {
+export default function qPhonePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-12 space-y-12">
       {/* Breadcrumb */}
       <nav className="text-sm text-muted-foreground flex items-center gap-2">
         <Link href="/" className="hover:text-foreground transition-colors">Apps</Link>
         <span>/</span>
-        <span className="text-foreground">UssdGuard</span>
+        <span className="text-foreground">qPhone</span>
       </nav>
 
       {/* Hero */}
       <div className="flex flex-col sm:flex-row gap-8 items-start">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
         <img
-          src="/apps/ussdguard/icon.svg"
-          alt="UssdGuard icon"
+            src="/apps/q-phone/icon.svg"
+          alt="qPhone icon"
           width={96}
           height={96}
           className="flex-shrink-0 rounded-2xl shadow-lg shadow-black/30"
         />
         <div className="space-y-3 flex-1">
           <div className="flex flex-wrap gap-2 items-center">
-            <h1 className="text-3xl font-bold text-foreground">UssdGuard</h1>
+            <h1 className="text-3xl font-bold text-foreground">qPhone</h1>
             <Badge variant="outline">Android</Badge>
             <Badge variant="secondary">Beta</Badge>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Android automation engine — like Tasker, built for USSD & device security.
-            Create macros with triggers, conditions, and multi-step actions. No root required.
+            Calls, caller rules, protected USSD codes and local SIM alerts. qPhone uses Android&apos;s
+            default phone-app role to present its call screen; it does not need a floating overlay.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <a

@@ -1,3 +1,5 @@
+@import "./qwabi-theme.css";
+@import "./qtheme-palettes.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -48,48 +50,49 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Dark-first palette — matches qwabi-dashboard (#0d1117 GitHub-dark) */
+/* Qwabi Apps site consumes the same design tokens as the Android apps. */
 :root {
-  --background: oklch(0.129 0.004 264);    /* #0d1117 */
-  --foreground: oklch(0.924 0.005 264);    /* #e6edf3 */
-  --card: oklch(0.167 0.005 264);          /* #161b22 */
-  --card-foreground: oklch(0.924 0.005 264);
-  --popover: oklch(0.167 0.005 264);
-  --popover-foreground: oklch(0.924 0.005 264);
-  --primary: oklch(0.573 0.191 254);       /* #1f6feb (blue) */
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.198 0.005 264);     /* #21262d */
-  --secondary-foreground: oklch(0.924 0.005 264);
-  --muted: oklch(0.198 0.005 264);
-  --muted-foreground: oklch(0.546 0.008 264); /* #8b949e */
-  --accent: oklch(0.316 0.012 264);        /* #30363d */
-  --accent-foreground: oklch(0.924 0.005 264);
-  --destructive: oklch(0.541 0.185 24);    /* #da3633 */
-  --border: oklch(0.198 0.005 264);        /* #21262d */
-  --input: oklch(0.198 0.005 264);
-  --ring: oklch(0.573 0.191 254);
+  color-scheme: dark;
+  --background: var(--qwabi-background);
+  --foreground: var(--qwabi-text);
+  --card: var(--qwabi-surface);
+  --card-foreground: var(--qwabi-text);
+  --popover: var(--qwabi-surface);
+  --popover-foreground: var(--qwabi-text);
+  --primary: var(--qwabi-q-theme);
+  --primary-foreground: #0b1220;
+  --secondary: var(--qwabi-surface-alt);
+  --secondary-foreground: var(--qwabi-text);
+  --muted: var(--qwabi-surface-alt);
+  --muted-foreground: var(--qwabi-text-muted);
+  --accent: var(--qwabi-surface-high);
+  --accent-foreground: var(--qwabi-text);
+  --destructive: var(--qwabi-danger);
+  --border: var(--qwabi-border);
+  --input: var(--qwabi-border);
+  --ring: var(--qwabi-q-theme);
   --radius: 0.625rem;
-  --sidebar: oklch(0.167 0.005 264);
-  --sidebar-foreground: oklch(0.924 0.005 264);
-  --sidebar-primary: oklch(0.573 0.191 254);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.198 0.005 264);
-  --sidebar-accent-foreground: oklch(0.924 0.005 264);
-  --sidebar-border: oklch(0.198 0.005 264);
-  --sidebar-ring: oklch(0.573 0.191 254);
+  --sidebar: var(--qwabi-surface);
+  --sidebar-foreground: var(--qwabi-text);
+  --sidebar-primary: var(--qwabi-q-theme);
+  --sidebar-primary-foreground: #0b1220;
+  --sidebar-accent: var(--qwabi-surface-alt);
+  --sidebar-accent-foreground: var(--qwabi-text);
+  --sidebar-border: var(--qwabi-border);
+  --sidebar-ring: var(--qwabi-q-theme);
 }
 
 /* Dark mode overrides — same values since we default dark */
 .dark {
-  --background: oklch(0.129 0.004 264);
-  --foreground: oklch(0.924 0.005 264);
-  --card: oklch(0.167 0.005 264);
-  --card-foreground: oklch(0.924 0.005 264);
-  --primary: oklch(0.573 0.191 254);
-  --secondary: oklch(0.198 0.005 264);
-  --muted: oklch(0.198 0.005 264);
-  --muted-foreground: oklch(0.546 0.008 264);
-  --border: oklch(0.198 0.005 264);
+  --background: var(--qwabi-background);
+  --foreground: var(--qwabi-text);
+  --card: var(--qwabi-surface);
+  --card-foreground: var(--qwabi-text);
+  --primary: var(--qwabi-q-theme);
+  --secondary: var(--qwabi-surface-alt);
+  --muted: var(--qwabi-surface-alt);
+  --muted-foreground: var(--qwabi-text-muted);
+  --border: var(--qwabi-border);
 }
 
 @layer base {
