@@ -5,7 +5,7 @@ export const ussdguardRelease = {
   releasedOn: '2026-11-12',
   fileName: 'ussdguard-0.1.9.apk',
   sizeMb: 23.1,
-  sha256: '2cfb25e5f34845557e3f470f196240db494869d45706a7b3b9c799940c9139f1',
+  sha256: '922b2d43e472ecc999ca54446d1c9b2aad470c2dd5648086ff99703186cffa4b',
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.9.apk',
   minAndroid: '7.0',
 };
