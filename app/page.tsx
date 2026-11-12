@@ -144,6 +144,18 @@ const comingSoon: AppEntry[] = [
     href: '/apps/q-theme',
   },
   {
+    slug: 'q-dim',
+    name: 'qDim',
+    tagline: 'Dim your screen below the normal minimum brightness',
+    description:
+      'A focused screen dimmer for comfortable night-time use. The Android app is being prepared; a download will appear here when a signed release is available.',
+    platform: 'Android',
+    status: 'comingsoon',
+    gradient: 'from-slate-700/30 to-slate-950/60',
+    icon: '/apps/q-dim/icon.svg',
+    tags: ['Display', 'Night use'],
+  },
+  {
     slug: 'q-find',
     name: 'qFind',
     tagline: 'Find and recover your connected devices',
