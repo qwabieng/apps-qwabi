@@ -1,3 +1,15 @@
+// Written by qShare/scripts/release-apk.sh. Rollback = revert this entry.
+export const qshareRelease = {
+  version: '0.1.0',
+  versionCode: 1,
+  releasedOn: '2026-11-13',
+  fileName: 'qshare-0.1.0.apk',
+  sizeMb: 21.7,
+  sha256: '0736690de22046a4019733acfa9ad69c56ab87a655b64904af6c71511a531432',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qshare-0.1.0.apk',
+  minAndroid: '7.0',
+};
+
 // Written by UssdGuard/scripts/release-apk.sh. Rollback = revert this entry.
 export const ussdguardRelease = {
   version: '0.1.9',

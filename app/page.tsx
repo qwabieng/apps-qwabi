@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -66,6 +66,20 @@ const released: AppEntry[] = [
     href: 'https://dpc.qwabi.co.za/download',
     external: true,
     version: qwabiTrackRelease.version,
+  },
+  {
+    slug: 'q-share',
+    name: 'qShare',
+    tagline: 'Send files, apps and text to any phone, near or far',
+    description:
+      'Share over the same Wi-Fi, to a phone close by, or to one far away with a room code. Downloads run in five sections at once and pick up where they stopped after a dropped connection.',
+    platform: 'Android',
+    status: 'beta',
+    gradient: 'from-fuchsia-700/25 to-slate-900/50',
+    icon: '/apps/q-share/icon.svg',
+    tags: ['Sharing', 'Files', 'Resumable'],
+    href: '/apps/q-share',
+    version: qshareRelease.version,
   },
   {
     slug: 'q-dim',
