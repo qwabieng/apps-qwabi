@@ -79,6 +79,7 @@ export default function QSmsPage() {
         <ol className="list-inside list-decimal space-y-2 text-muted-foreground">
           <li>Install the APK and open qSMS.</li>
           <li>Tap the button to make qSMS your messages app, and confirm when Android asks.</li>
+          <li>If Android says the setting is restricted, open the phone’s Settings, then Apps, then qSMS, tap the three dots at the top right and choose “Allow restricted settings”. Go back to qSMS and tap the button again.</li>
           <li>Allow notifications, contacts and phone access when asked. Phone access is used to show which SIM a text came in on.</li>
         </ol>
         <p className="text-sm text-muted-foreground">
