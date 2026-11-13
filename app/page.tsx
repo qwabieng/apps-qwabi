@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease, qsmsRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -82,6 +82,20 @@ const released: AppEntry[] = [
     version: qshareRelease.version,
   },
   {
+    slug: 'q-sms',
+    name: 'qSMS',
+    tagline: 'A text messaging app with search, send later and a blocked folder',
+    description:
+      'Replaces your phone’s messages app for texts. Search every message, pin or mute conversations, block senders, copy one-time codes from the notification, schedule a text, and undo a send.',
+    platform: 'Android',
+    status: 'beta',
+    gradient: 'from-rose-700/25 to-slate-900/50',
+    icon: '/apps/q-sms/icon.svg',
+    tags: ['Messaging', 'Dual SIM', 'Send later'],
+    href: '/apps/q-sms',
+    version: qsmsRelease.version,
+  },
+  {
     slug: 'q-dim',
     name: 'qDim',
     tagline: 'Make your screen gentler',
@@ -138,18 +152,6 @@ const comingSoon: AppEntry[] = [
     gradient: 'from-indigo-700/20 to-slate-900/50',
     icon: '/apps/q-locker/icon.svg',
     tags: ['Security', 'Privacy'],
-  },
-  {
-    slug: 'sms',
-    name: 'qSMS',
-    tagline: 'SMS hub with AI assistance, backup and automations',
-    description:
-      'Full inbox with multi-SIM awareness and SIM-change warnings, Claude-powered summaries and replies, backup and export, message insights, and rule-based automations.',
-    platform: 'Android',
-    status: 'comingsoon',
-    gradient: 'from-blue-700/20 to-slate-900/50',
-    icon: '/apps/q-sms/icon.svg',
-    tags: ['Messaging', 'AI', 'Automation'],
   },
   {
     slug: 'ussd-automations',

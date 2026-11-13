@@ -1,3 +1,15 @@
+// Written by qSMS/scripts/release-apk.sh. Rollback = revert this entry.
+export const qsmsRelease = {
+  version: '0.1.0',
+  versionCode: 1,
+  releasedOn: '2026-11-13',
+  fileName: 'qsms-0.1.0.apk',
+  sizeMb: 21.2,
+  sha256: '57d240d6fab5ce457f311be79ecf554072747e82dd916166430780887ec06212',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.1.0.apk',
+  minAndroid: '7.0',
+};
+
 // Written by qShare/scripts/release-apk.sh. Rollback = revert this entry.
 export const qshareRelease = {
   version: '0.1.0',
