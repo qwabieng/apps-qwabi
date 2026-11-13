@@ -109,6 +109,21 @@ const released: AppEntry[] = [
     href: '/apps/q-theme',
     version: qThemeAndroidRelease.version,
   },
+  {
+    slug: 'umculo',
+    name: 'Umculo Player',
+    tagline: 'Your music, in your hands',
+    description:
+      'A local-first music player and two-deck mixing studio. Your own library, effects, EQ and recordings, with no account and nothing uploaded. Android and Intel Mac previews are available to download.',
+    platform: 'Android + Mac',
+    status: 'beta',
+    gradient: 'from-lime-700/20 to-slate-900/50',
+    icon: '/apps/umculo/icon.svg',
+    tags: ['Music', 'DJ mixing', 'Offline'],
+    href: 'https://player.umculo.app',
+    external: true,
+    version: '1.0.1',
+  },
 ];
 
 const comingSoon: AppEntry[] = [
