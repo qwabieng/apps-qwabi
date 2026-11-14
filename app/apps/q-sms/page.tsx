@@ -25,7 +25,19 @@ const features = [
   },
   {
     name: 'One-time codes',
-    detail: 'When a text carries a code, the notification and the message both get a button that copies it.',
+    detail: 'Copy a code from its notification or message. Optionally show a copyable code card over other apps.',
+  },
+  {
+    name: 'Know which SIM received it',
+    detail: 'Each message shows the number or SIM it arrived on. Add numbers yourself when Android cannot read them from the SIM.',
+  },
+  {
+    name: 'Back up and restore',
+    detail: 'Export and import SMS backups. Choose a Google Drive file for automatic cloud backups, with no Google Cloud project or API key.',
+  },
+  {
+    name: 'Understand your messages',
+    detail: 'On-device insights summarize message trends, reply times, frequent senders, one-time codes, estimated bank texts and activity by SIM.',
   },
   {
     name: 'Send later',
@@ -93,7 +105,7 @@ export default function QSmsPage() {
           <li>On phones with two SIMs you choose the SIM for each text, and replies default to the SIM the conversation last used.</li>
           <li>A scheduled text can go out a few minutes late unless “Alarms &amp; reminders” is allowed for qSMS in Android settings.</li>
           <li>Hold a message to copy, forward or delete it. You can reply and mark as read from the notification.</li>
-          <li>Settings can export every text to a file. Restoring from that file is not available yet.</li>
+          <li>Settings can export or import SMS backups, or automatically update a selected file in Google Drive or another Android document provider. The cloud backup contains readable message text and phone numbers.</li>
           <li>Pins, mutes, archived conversations and scheduled texts belong to qSMS and do not carry over to another messages app.</li>
         </ul>
       </section>
