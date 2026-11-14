@@ -57,7 +57,7 @@ export default function QSmsPage() {
       </nav>
       <div className="flex flex-col items-start gap-7 sm:flex-row">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export uses the public icon directly */}
-        <img src="/apps/q-sms/icon.svg" alt="qSMS icon" width={96} height={96} className="rounded-2xl shadow-lg" />
+        <img src="/apps/q-sms/icon.png" alt="qSMS icon" width={96} height={96} className="rounded-2xl shadow-lg" />
         <div className="flex-1 space-y-3">
           <div className="flex flex-wrap items-center gap-2"><h1 className="text-3xl font-bold">qSMS</h1><Badge variant="outline">Android</Badge><Badge variant="secondary">Beta</Badge></div>
           <p className="text-lg text-muted-foreground">A messages app for text messages, with search, send later and a blocked folder.</p>

@@ -41,7 +41,7 @@ export default function qPhonePage() {
       <div className="flex flex-col sm:flex-row gap-8 items-start">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer */}
         <img
-            src="/apps/q-phone/icon.svg"
+            src="/apps/q-phone/icon.png"
           alt="qPhone icon"
           width={96}
           height={96}

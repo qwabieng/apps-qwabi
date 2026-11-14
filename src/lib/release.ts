@@ -1,36 +1,36 @@
 // Written by qSMS/scripts/release-apk.sh. Rollback = revert this entry.
 export const qsmsRelease = {
-  version: '0.3.3',
-  versionCode: 7,
+  version: '0.3.5',
+  versionCode: 9,
   releasedOn: '2026-11-14',
-  fileName: 'qsms-0.3.3.apk',
-  sizeMb: 34.7,
-  sha256: 'fbd6e3c27075664ddc436f685781c11d3b6db4bc11f2d38f1026feff6705dfe9',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.3.3.apk',
+  fileName: 'qsms-0.3.5.apk',
+  sizeMb: 35.2,
+  sha256: '11b40b8d737cb81853562af2124c822f045367a164f03fc39bca22b440fb332d',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.3.5.apk',
   minAndroid: '7.0',
 };
 
 // Written by qShare/scripts/release-apk.sh. Rollback = revert this entry.
 export const qshareRelease = {
-  version: '0.1.0',
-  versionCode: 1,
-  releasedOn: '2026-11-13',
-  fileName: 'qshare-0.1.0.apk',
-  sizeMb: 21.7,
-  sha256: '0736690de22046a4019733acfa9ad69c56ab87a655b64904af6c71511a531432',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qshare-0.1.0.apk',
+  version: '0.2.4',
+  versionCode: 6,
+  releasedOn: '2026-11-14',
+  fileName: 'qshare-0.2.4.apk',
+  sizeMb: 31.9,
+  sha256: 'da1255b8b2873c5ebf544bd912999d4330209d3af39ffd9497618d89224c0cfc',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qshare-0.2.4.apk',
   minAndroid: '7.0',
 };
 
 // Written by UssdGuard/scripts/release-apk.sh. Rollback = revert this entry.
 export const ussdguardRelease = {
-  version: '0.1.11',
-  versionCode: 12,
+  version: '0.1.14',
+  versionCode: 15,
   releasedOn: '2026-11-14',
-  fileName: 'ussdguard-0.1.11.apk',
-  sizeMb: 34.6,
-  sha256: 'b7aaceec15ada9bd105965c5d08313158c8345d5f072031d800780b01c6b6504',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.11.apk',
+  fileName: 'ussdguard-0.1.14.apk',
+  sizeMb: 35.0,
+  sha256: '0a5ee1a23204ac28b04ce5cc61a36f635048c1d8fe5413a575fe6d952e3bc445',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.14.apk',
   minAndroid: '7.0',
 };
 
@@ -49,14 +49,16 @@ export const screenLockRelease = {
 };
 
 // Mirrors the qFy release in device-owner/qwabi-dashboard.
+// Mirrors qFy's release in device-owner/qwabi-dashboard.
 export const qwabiTrackRelease = {
-  version: '0.1.14',
-  versionCode: 15,
-  releasedOn: '2026-11-12',
-  fileName: 'qfy-0.1.14.apk',
-  sizeMb: 35.5,
-  sha256: '509d1cb59a5aeb0847b5eebd752279e79da0b4c9481811a9b0d7a8163489f0c0',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qfy-0.1.14.apk',
+  version: '0.1.15',
+  versionCode: 16,
+  releasedOn: '2026-11-13',
+  fileName: 'qfy-0.1.15.apk',
+  sizeMb: 24.8,
+  sha256: '73301554397c8d17a5ecce8f54fa1a0ec6c3123cf1db4f698586d11716897183',
+  signingCertificateSha256: 'b099bb1b7bd5816ffeb2e45e1510aec698bfd87b7e133456e619cbf815e00608',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qfy-0.1.15.apk',
   minAndroid: '11',
 };
 

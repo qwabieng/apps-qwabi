@@ -36,14 +36,18 @@ export default function QSharePage() {
       </nav>
       <div className="flex flex-col items-start gap-7 sm:flex-row">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export uses the public icon directly */}
-        <img src="/apps/q-share/icon.svg" alt="qShare icon" width={96} height={96} className="rounded-2xl shadow-lg" />
+        <img src="/apps/q-share/icon.png" alt="qShare icon" width={96} height={96} className="rounded-2xl shadow-lg" />
         <div className="flex-1 space-y-3">
           <div className="flex flex-wrap items-center gap-2"><h1 className="text-3xl font-bold">qShare</h1><Badge variant="outline">Android</Badge><Badge variant="secondary">Beta</Badge></div>
-          <p className="text-lg text-muted-foreground">Send files, apps and text to another phone, whether it is on your Wi-Fi, next to you, or in another town.</p>
+          <p className="text-lg text-muted-foreground">Send files, apps, text, Wi-Fi details and movie files to another phone, whether it is on your Wi-Fi, next to you, or in another town.</p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <a href={rel.url} download={rel.fileName} className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">Download APK · v{rel.version}</a>
             <span className="text-sm text-muted-foreground">{rel.sizeMb} MB · Android {rel.minAndroid}+ · {rel.releasedOn}</span>
           </div>
+          <p className="text-sm text-muted-foreground">
+            No Android phone? Join a share room from any browser at{' '}
+            <a href="https://share.qwabi.co.za" className="underline underline-offset-4 hover:text-foreground">share.qwabi.co.za</a>.
+          </p>
         </div>
       </div>
       <Separator />
@@ -75,7 +79,7 @@ export default function QSharePage() {
         <ol className="list-inside list-decimal space-y-2 text-muted-foreground">
           <li>Install the APK on both phones and open qShare.</li>
           <li>Allow notifications and nearby devices when asked.</li>
-          <li>Tap Files, Apps or Text, choose what to send, then pick the other phone or a share room.</li>
+          <li>Tap Files, Apps, Text, Wi-Fi or Movies, choose what to send, then pick the other phone or a share room.</li>
           <li>On the other phone, tap Accept. Received files are saved to Download/qShare.</li>
         </ol>
         <p className="text-sm text-muted-foreground">
@@ -90,6 +94,7 @@ export default function QSharePage() {
           <li>Wi-Fi transfers are not encrypted on the local network. Use a Wi-Fi you trust.</li>
           <li>The sending phone needs qShare open for Wi-Fi and nearby transfers. Room transfers continue in the background.</li>
           <li>Some apps from the Play Store may not install on a different phone model when shared.</li>
+          <li>Movie subtitle lookup needs an OpenSubtitles API key. Without it, subtitle downloads are unavailable.</li>
         </ul>
       </section>
       <Separator />

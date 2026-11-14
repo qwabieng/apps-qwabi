@@ -171,7 +171,7 @@ export default function ScreenLockPage() {
                 <dt className="text-muted-foreground">Size</dt>
                 <dd>{rel.sizeMb} MB</dd>
                 <dt className="text-muted-foreground">Requires</dt>
-                <dd>Android {rel.minAndroid} or newer, 64-bit (arm64)</dd>
+                <dd>Android {rel.minAndroid} or newer, 32-bit and 64-bit phones</dd>
                 <dt className="text-muted-foreground">SHA-256</dt>
                 <dd className="font-mono text-xs break-all">{rel.sha256}</dd>
               </dl>

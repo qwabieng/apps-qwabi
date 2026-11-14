@@ -41,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
           <div className="mx-auto max-w-6xl px-4">
             © 2026 Qwabi Apps. Engineered by Qwabi Engineering in South Africa.
+            {' '}<a href="/privacy" className="underline underline-offset-4 hover:text-foreground">Privacy policy</a>
           </div>
         </footer>
       </body>

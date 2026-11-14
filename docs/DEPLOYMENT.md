@@ -34,18 +34,28 @@ Set on Vercel (Production) and locally in `.env.local` (gitignored).
 
 ## Publishing an app release
 
-Each app owns its own release script. It builds locally (no CI), uploads the file to the
-`downloads` bucket, and rewrites [`src/lib/release.ts`](../src/lib/release.ts), which the
-site reads for the download button and version details.
+Use the workspace release command from the Apps Hub workspace root. It runs the app's
+test/build/sign/upload adapter, updates [`src/lib/release.ts`](../src/lib/release.ts),
+builds this site, deploys it to Vercel Production, and checks the public page and APK:
+
+```bash
+./scripts/release-app.sh sms
+```
+
+The full app-to-adapter table, signing requirements, and rollback steps are in
+[`../../docs/RELEASING.md`](../../docs/RELEASING.md). Supabase migrations and Edge
+Functions are covered in [`../../docs/SUPABASE.md`](../../docs/SUPABASE.md).
+
+Currently configured adapters:
 
 | App | Script | Docs |
 |-----|--------|------|
-| UssdGuard | `~/dev/UssdGuard/scripts/release-apk.sh` | `UssdGuard/docs/RELEASE.md` |
+| qSMS | `apps/sms/scripts/release-apk.sh` | `docs/RELEASING.md` |
+| qShare | `apps/q-share/scripts/release-apk.sh` | `docs/RELEASING.md` |
+| qPhone | `apps/ussd-guard/scripts/release-apk.sh` | `docs/RELEASING.md` |
+| qLock | `scripts/release-apk.sh` | `docs/RELEASING.md` |
+| qFy | `device-owner/qwabi-track/scripts/release-apk.sh` | `docs/RELEASING.md` |
+| qTheme / qDim | `scripts/release-android-app.sh` | `docs/RELEASING.md` |
 
-After the script finishes, commit and push here so Vercel redeploys with the new link:
-
-```bash
-git commit -am "release: ussdguard <version>" && git push
-```
-
-Rollback: revert `src/lib/release.ts` and push. Older APKs stay in the bucket.
+The script deploys the current working tree directly and leaves Git commits/pushes to
+the user. Do not put credentials in this repository or its release metadata.
