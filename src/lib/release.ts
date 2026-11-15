@@ -4,8 +4,8 @@ export const qsmsRelease = {
   versionCode: 10,
   releasedOn: '2026-11-15',
   fileName: 'qsms-0.3.6.apk',
-  sizeMb: 34.9,
-  sha256: '3b1e040c123340cf54ab28dcb44ebbdd4f35fd2db3429a0967e1edfbac07da35',
+  sizeMb: 35.3,
+  sha256: '85d95d099d54b4b9db8aab3917559bb901524298c4e22699316ada1a806d34e2',
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.3.6.apk',
   minAndroid: '7.0',
 };
@@ -17,7 +17,7 @@ export const qshareRelease = {
   releasedOn: '2026-11-15',
   fileName: 'qshare-0.2.5.apk',
   sizeMb: 31.7,
-  sha256: '3d234b0734e0e9f6d47e067d108b44db2238087ea2d6f277022bc7fc95764780',
+  sha256: 'b3f90139b9df087439d1db2e502a9a2d518f81e14e77a24c68056f6d7ad6e1de',
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qshare-0.2.5.apk',
   minAndroid: '7.0',
 };
@@ -28,8 +28,8 @@ export const ussdguardRelease = {
   versionCode: 16,
   releasedOn: '2026-11-15',
   fileName: 'ussdguard-0.1.15.apk',
-  sizeMb: 34.8,
-  sha256: 'ef9d52994f77c41a22a4b967b8b748d61e4d0de802e36000d7d285c635b7ed9c',
+  sizeMb: 35.3,
+  sha256: '61697e9a8056469581da4fa57e0dea5cc5a5902b07222be0df733e608eb03e3f',
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.15.apk',
   minAndroid: '7.0',
 };
