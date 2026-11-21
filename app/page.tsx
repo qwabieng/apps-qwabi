@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease, qsmsRelease } from '@/src/lib/release';
+import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease, qsmsRelease, qLogRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
 
@@ -110,6 +110,20 @@ const released: AppEntry[] = [
     version: qDimAndroidRelease.version,
   },
   {
+    slug: 'activity-logger',
+    name: 'qLog',
+    tagline: 'A tamper-evident log of app activity on your phone',
+    description:
+      'Records which apps are opened and which apps are installed or removed, into an append-only, hash-chained log that cannot be deleted or edited. Uninstall protection, the qLock combination lock, Google Drive backup and restore, and interval automations.',
+    platform: 'Android',
+    status: 'beta',
+    gradient: 'from-slate-700/30 to-slate-900/50',
+    icon: '/apps/activity-logger/icon.svg',
+    tags: ['Logging', 'Security', 'Device Admin'],
+    href: '/apps/activity-logger',
+    version: qLogRelease.version,
+  },
+  {
     slug: 'q-theme',
     name: 'qTheme',
     tagline: 'Share one theme across your Qwabi Android apps',
@@ -176,18 +190,6 @@ const comingSoon: AppEntry[] = [
     gradient: 'from-sky-800/20 to-slate-900/50',
     icon: '/apps/q-contacts/icon.svg',
     tags: ['Contacts', 'Productivity'],
-  },
-  {
-    slug: 'activity-logger',
-    name: 'qActivity',
-    tagline: 'One timeline of activity across every Qwabi app',
-    description:
-      'A persistent, searchable log that any Qwabi app can write to. Filter by app, event type, contact or date, and export to CSV or JSON.',
-    platform: 'Android',
-    status: 'comingsoon',
-    gradient: 'from-slate-700/30 to-slate-900/50',
-    icon: '/apps/q-activity/icon.svg',
-    tags: ['Logging', 'Insights'],
   },
   {
     slug: 'q-find',

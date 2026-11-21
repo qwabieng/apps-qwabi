@@ -85,3 +85,16 @@ export const qDimAndroidRelease = {
   url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qdim-1.0.0.apk',
   minAndroid: '8.0',
 };
+
+// Written by scripts/release-android-app.sh qlog. Rollback = revert this entry.
+export const qLogRelease = {
+  version: '1.0.0',
+  versionCode: 1,
+  releasedOn: '2026-11-21',
+  fileName: 'qlog-1.0.0.apk',
+  sizeMb: 2.6,
+  sha256: 'a94bc6214817c785665aa4ff078298dba6137d45e235841f2a8d524e0c3b816e',
+  signingCertificateSha256: 'b099bb1b7bd5816ffeb2e45e1510aec698bfd87b7e133456e619cbf815e00608',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qlog-1.0.0.apk',
+  minAndroid: '8.0',
+};
