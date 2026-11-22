@@ -1,12 +1,12 @@
 // Written by qSMS/scripts/release-apk.sh. Rollback = revert this entry.
 export const qsmsRelease = {
-  version: '0.3.6',
-  versionCode: 10,
-  releasedOn: '2026-11-15',
-  fileName: 'qsms-0.3.6.apk',
-  sizeMb: 35.3,
-  sha256: '85d95d099d54b4b9db8aab3917559bb901524298c4e22699316ada1a806d34e2',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.3.6.apk',
+  version: '0.5.0',
+  versionCode: 12,
+  releasedOn: '2026-11-22',
+  fileName: 'qsms-0.5.0.apk',
+  sizeMb: 35.0,
+  sha256: '10c5adce2b53a54ce93b0b7241a0ab96b4f83ffc53eae6899b908f993878a039',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/qsms-0.5.0.apk',
   minAndroid: '7.0',
 };
 
@@ -24,13 +24,13 @@ export const qshareRelease = {
 
 // Written by UssdGuard/scripts/release-apk.sh. Rollback = revert this entry.
 export const ussdguardRelease = {
-  version: '0.1.15',
-  versionCode: 16,
-  releasedOn: '2026-11-15',
-  fileName: 'ussdguard-0.1.15.apk',
-  sizeMb: 35.3,
-  sha256: '61697e9a8056469581da4fa57e0dea5cc5a5902b07222be0df733e608eb03e3f',
-  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.1.15.apk',
+  version: '0.2.1',
+  versionCode: 18,
+  releasedOn: '2026-11-22',
+  fileName: 'ussdguard-0.2.1.apk',
+  sizeMb: 34.8,
+  sha256: '66847f4e6dcbb3d0130a943b2b731619c2b7f302bb8508a315f870aefc73ab24',
+  url: 'https://qaacgbjsedgvbjghaokn.supabase.co/storage/v1/object/public/downloads/ussdguard-0.2.1.apk',
   minAndroid: '7.0',
 };
 
