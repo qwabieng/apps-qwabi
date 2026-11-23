@@ -32,6 +32,40 @@ Set on Vercel (Production) and locally in `.env.local` (gitignored).
   curl -s -o /dev/null -w '%{http_code}\n' https://apps.qwabi.co.za/apps/ussdguard   # 200
   ```
 
+## Download counts
+
+The site is a static export, so it cannot count downloads itself. Every "Download APK"
+link goes through the Supabase Edge Function `download`
+(`device-owner/qwabi-dashboard/supabase/functions/download`), built by
+[`downloadUrl()`](../src/lib/downloads.ts):
+
+```
+https://qaacgbjsedgvbjghaokn.supabase.co/functions/v1/download?app=q-sms&file=qsms-0.7.0.apk
+```
+
+The function records the download and redirects (302) to the same public APK URL as
+before. `GET .../functions/v1/download` with no `app` returns `{ "counts": { "<slug>": n } }`,
+cached for 60 seconds. `<DownloadCount app="<slug>">` reads that once per page and shows
+"1 240 downloads" on the home cards and app pages. It shows nothing when the count is
+zero or the function is unreachable.
+
+- **Counted:** a GET from a browser. Once per app per visitor (salted hash of IP + user
+  agent) per UTC day, across versions. Totals are per app, summed across versions.
+- **Redirected but not counted:** HEAD, known bots and link previews (Facebook,
+  WhatsApp, Telegram…), browser prefetch, and range requests that resume past byte 0.
+- **Not counted at all:** downloads before the counter went live, direct links to the
+  Storage URL, and qFy (it downloads from `dpc.qwabi.co.za`).
+- **Data:** `public.app_download_counts` (app, version, downloads) in migration
+  `20261123150000_app_downloads.sql`; only the function (service role) can read or write it.
+- **New app:** add its slug and APK prefix to `APPS` in the function and to `DownloadApp`
+  in `src/lib/downloads.ts`, then link with `downloadUrl('<slug>', rel)`.
+- **Local testing:** set `NEXT_PUBLIC_DOWNLOADS_URL` to a locally served function.
+- **Tests:** `device-owner/qwabi-dashboard/supabase/tests/app_downloads_test.sql` and
+  `download_function_test.mjs` (run by `supabase/tests/run.sh`).
+
+Order matters when this ships: deploy the migration and function first, then the Hub.
+A Hub that links to a missing function would break every download button.
+
 ## Publishing an app release
 
 Use the workspace release command from the Apps Hub workspace root. It runs the app's
