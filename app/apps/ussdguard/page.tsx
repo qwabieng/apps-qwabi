@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Ban, Bell, Hash, Phone, ShieldCheck, Users } from 'lucide-react';
 import { ussdguardRelease as rel } from '@/src/lib/release';
+import { downloadUrl } from '@/src/lib/downloads';
+import { DownloadCount } from '@/components/download-count';
 
 export const metadata: Metadata = {
   title: 'qPhone',
@@ -59,7 +61,7 @@ export default function qPhonePage() {
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <a
-              href={rel.url}
+              href={downloadUrl('ussdguard', rel)}
               download={rel.fileName}
               className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
             >
@@ -68,6 +70,7 @@ export default function qPhonePage() {
             <span className="text-sm text-muted-foreground">
               {rel.sizeMb} MB · Android {rel.minAndroid}+ · {rel.releasedOn}
             </span>
+            <DownloadCount app="ussdguard" className="text-sm" />
           </div>
         </div>
       </div>

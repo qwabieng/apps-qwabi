@@ -13,6 +13,8 @@ import {
   type ThemePreference,
 } from '@/src/lib/theme-preference';
 import { qThemeAndroidRelease } from '@/src/lib/release';
+import { downloadUrl } from '@/src/lib/downloads';
+import { DownloadCount } from '@/components/download-count';
 
 export function ThemeEditor() {
   const [preference, setPreference] = useState<ThemePreference>(DEFAULT_THEME);
@@ -129,9 +131,12 @@ export function ThemeEditor() {
               <RotateCcw className="h-3.5 w-3.5" /> Reset
             </button>
           </div>
-          <a href={qThemeAndroidRelease.url} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl border border-primary/40 bg-primary/10 px-5 text-sm font-semibold text-primary transition hover:bg-primary/15" download>
-            Get qTheme for Android · v{qThemeAndroidRelease.version}
-          </a>
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <a href={downloadUrl('q-theme', qThemeAndroidRelease)} className="inline-flex min-h-11 items-center justify-center rounded-xl border border-primary/40 bg-primary/10 px-5 text-sm font-semibold text-primary transition hover:bg-primary/15" download={qThemeAndroidRelease.fileName}>
+              Get qTheme for Android · v{qThemeAndroidRelease.version}
+            </a>
+            <DownloadCount app="q-theme" className="text-sm" />
+          </div>
         </section>
 
         <section className="lg:sticky lg:top-24">

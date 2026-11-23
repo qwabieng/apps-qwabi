@@ -7,6 +7,8 @@ import {
   ShieldCheck, Fingerprint, Layers, Zap, Users, BarChart3, KeyRound, Moon,
 } from 'lucide-react';
 import { screenLockRelease as rel } from '@/src/lib/release';
+import { downloadUrl } from '@/src/lib/downloads';
+import { DownloadCount } from '@/components/download-count';
 
 export const metadata: Metadata = {
   title: 'qLock',
@@ -100,7 +102,7 @@ export default function ScreenLockPage() {
             {hasRelease ? (
               <>
                 <a
-                  href={rel.url}
+                  href={downloadUrl('screen-lock', rel)}
                   download={rel.fileName}
                   className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
                 >
@@ -109,6 +111,7 @@ export default function ScreenLockPage() {
                 <span className="text-sm text-muted-foreground">
                   {rel.sizeMb} MB · Android {rel.minAndroid}+ · {rel.releasedOn}
                 </span>
+            <DownloadCount app="screen-lock" className="text-sm" />
               </>
             ) : (
               <span className="inline-flex h-10 items-center rounded-md border border-border px-5 text-sm text-muted-foreground">

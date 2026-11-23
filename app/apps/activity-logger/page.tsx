@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { qLogRelease as rel } from '@/src/lib/release';
+import { downloadUrl } from '@/src/lib/downloads';
+import { DownloadCount } from '@/components/download-count';
 
 export const metadata: Metadata = {
   title: 'qLog',
@@ -22,8 +24,9 @@ export default function QLogPage() {
           <div className="flex flex-wrap items-center gap-2"><h1 className="text-3xl font-bold">qLog</h1><Badge variant="outline">Android</Badge><Badge variant="secondary">Beta</Badge></div>
           <p className="text-lg text-muted-foreground">Records which apps are opened and which apps are installed or removed, into a tamper-evident log you cannot delete — protected by a lock and backed up to Google Drive.</p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <a href={rel.url} download={rel.fileName} className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">Download APK · v{rel.version}</a>
+            <a href={downloadUrl('activity-logger', rel)} download={rel.fileName} className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">Download APK · v{rel.version}</a>
             <span className="text-sm text-muted-foreground">{rel.sizeMb} MB · Android {rel.minAndroid}+ · {rel.releasedOn}</span>
+            <DownloadCount app="activity-logger" className="text-sm" />
           </div>
         </div>
       </div>

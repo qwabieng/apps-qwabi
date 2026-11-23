@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { DownloadCount } from '@/components/download-count';
 import { ussdguardRelease, screenLockRelease, qwabiTrackRelease, qDimAndroidRelease, qThemeAndroidRelease, qshareRelease, qsmsRelease, qLogRelease } from '@/src/lib/release';
 
 type Status = 'beta' | 'pilot' | 'stable' | 'comingsoon';
@@ -260,12 +261,13 @@ function AppCard({ app }: { app: AppEntry }) {
         <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">{app.description}</p>
       </CardContent>
 
-      <CardFooter className="pt-2 flex flex-wrap gap-2">
+      <CardFooter className="pt-2 flex flex-wrap items-center gap-2">
         {app.version && (
           <Badge variant="outline" className="font-mono text-xs">
             v{app.version}
           </Badge>
         )}
+        {app.href && <DownloadCount app={app.slug} className="text-xs" />}
         {app.tags.map(tag => (
           <Badge key={tag} variant="secondary" className="text-xs">
             {tag}
